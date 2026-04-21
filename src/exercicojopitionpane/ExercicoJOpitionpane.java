@@ -26,7 +26,13 @@ public class ExercicoJOpitionpane {
         do {
             
             String usuario = JOptionPane.showInputDialog(null, "Login;");
+            if(usuario.isBlank()){
+                JOptionPane.showMessageDialog(null, "Usuario Não Pode Estar Vazio!");
+            }
             String senha = JOptionPane.showInputDialog(null, "Senha");
+            if(senha.isBlank()){
+                JOptionPane.showMessageDialog(null, "Senha Não Pode Estar Vazio!");
+            }
 
             if ("admin".equals(usuario) && "123".equals(senha)) {
                 JOptionPane.showMessageDialog(null, "Login Realizado Com Sucesso");
